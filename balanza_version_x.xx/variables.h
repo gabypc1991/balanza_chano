@@ -9,8 +9,9 @@ float h;
 float t;
 float f;
 float lectura_balanza;
+float factor_palanca = 5.25;
 
-int factor_scale = 34500;
+int factor_scale = 54700;
 
 String pagina = "index";
 String header;

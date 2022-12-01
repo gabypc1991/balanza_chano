@@ -38,7 +38,7 @@ void setup() {
   RTC.adjust(DateTime(__DATE__, __TIME__)); 
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
   scale.set_scale(factor_scale);
-  scale.tare(20);
+//  scale.tare(20);
 //  eeprom_read();  
   Serial.println();
   
@@ -58,6 +58,8 @@ void read_dht(){
 
 void read_balanza(){
   lectura_balanza = scale.get_units(5);
+  lectura_balanza *= factor_palanca;
+  lectura_balanza += 9.45;
 }
 
 String read_rtc(){
