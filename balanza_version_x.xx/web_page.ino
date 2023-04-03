@@ -17,7 +17,7 @@ void webExc(){
           if (currentLine.length() == 0) {
             // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)
             // and a content-type so the client knows what's coming, then a blank line:
-            read_dht();
+//            read_dht();
             read_balanza();
             client.println("HTTP/1.1 200 OK");
             client.println("Content-type:text/html");
@@ -85,9 +85,9 @@ void html_inicio(WiFiClient client){
 
             // Web Page Heading
             client.println("<body><h1>BALANZA MODULAR x 4 (1000 Kg. Max.)</h1>");
-            client.println("<p class =\"fechaHora\">" + read_rtc() + "</p>");
-            client.println("<p class =\"humedad\">Humedad: " + String(h) + " %</p>");
-            client.println("<p class =\"humedad\">Temperatura: " + String(t) + " C</p>");
+//            client.println("<p class =\"fechaHora\">" + read_rtc() + "</p>");
+//            client.println("<p class =\"humedad\">Humedad: " + String(h) + " %</p>");
+//            client.println("<p class =\"humedad\">Temperatura: " + String(t) + " C</p>");
             client.println("<p class =\"humedad\">Peso: " + String(lectura_balanza, 2) + " Kg.</p>");
             client.println("<p class =\"humedad\">Factor: " + String(factor_scale) + " u.</p>");
 
